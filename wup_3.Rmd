@@ -34,9 +34,7 @@ ggplot(davisdata, aes(x = Seat, y = alcohol)) +
 
 ```
 
-
-
-
+This box plot illustrates the distribution of alcohol across different seating locations represented by the "seat" variable in the data set. Each box represents the interquartile range (IQR) of alcohol consumption within each set, with a horizontal line inside denoting the median value. By visually taking an observation of the box plot, we can observe any apparent differences in alcohol consumption among the different seating locations provided.
 
 ## Numerical Summarys 
 ```{r}
@@ -56,11 +54,6 @@ summary.aov(model1)
 ```{r}
 plot(TukeyHSD(model1))
 ```
-There is a difference between the rows. The back rows
-
-
-
-
 
 ```{r}
 # Load the necessary library
@@ -80,9 +73,10 @@ tukey_result <- TukeyHSD(anova_result)
 # Print the results
 print(tukey_result)
 ```
-
+Based on both the ANOVA and Turkey's HSD test results, there are significant differences in alcohol consumption between the Back seat and the Front seat, as well as between the Back seat and the Middle seat. However, there is no significant difference in alcohol consumption between the Front seat and the Middle seat.
 
 
 ## Conclusions
 
+We walked through ANOVA which is more difficult  than the T-test. If there are more than two categories there is more work if the ANOVA has a lower p value. We had to run the turkey test and we asked Chat GPT for a code which was plugged in and it allowed us to see the differences in the three rows. These plots allowed us to see that there was a significant difference in the alcohol consumption between the seats. Additionally, the Turkey's HSD test results show significant differences in alcohol consumption between the Back seat and the Front seat, as well as between the Back seat and the Middle seat. However, there is no significant difference in alcohol consumption between the Front seat and the Middle seat.
 

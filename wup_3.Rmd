@@ -48,6 +48,41 @@ favstats(alcohol~Seat,data=davisdata)
 
 ## Inferential Tests
 
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+
+```{r}
+plot(TukeyHSD(model1))
+```
+There is a difference between the rows. The back rows
+
+
+
+
+
+```{r}
+# Load the necessary library
+library(stats)
+
+# Perform ANOVA test
+anova_result <- aov(alcohol ~ Seat, data = davisdata)
+
+# Check the ANOVA table
+summary(anova_result)
+```
+
+```{r}
+# Perform Tukey HSD test
+tukey_result <- TukeyHSD(anova_result)
+
+# Print the results
+print(tukey_result)
+```
+
+
+
 ## Conclusions
 
 

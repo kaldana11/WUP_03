@@ -24,6 +24,17 @@ mutate(across(where(is.character), as.factor))
 ## you choose to sit in??
 
 ## Now with ggplot - first select the basic data
+```{r}
+library(ggplot2)
+
+# Create the box plot
+ggplot(davisdata, aes(x = Seat, y = alcohol)) +
+  geom_boxplot() +
+  labs(title = "Box Plot of Alcohol by Seat")
+
+```
+
+
 
 ```{r}
 basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
